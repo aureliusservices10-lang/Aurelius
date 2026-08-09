@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelius | Protection Intelligence</title>
+    <!-- Google Fonts: Playfair Display, Cinzel, & Inter for Luxury Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- ================= INTRO PRELOADER ================= -->
+    <div class="preloader">
+        <div class="loader-content">
+            <img src="assets/imgs/Logo_Blue.PNG" alt="">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <!-- ================= SEARCH OVERLAY MODAL ================= -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-overlay-content">
+            <div class="search-header d-flex align-items-center justify-content-between">
+                <span class="search-title">Search Aurelius Protection Intelligence</span>
+                <button type="button" class="search-close-btn" id="searchOverlayClose" aria-label="Close Search">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="search-input-wrapper">
+                <i class="bi bi-search search-input-icon"></i>
+                <input type="text" id="headerSearchInput" class="search-input"
+                    placeholder="Search services, compliance, or career opportunities...">
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestions-label">Popular Searches:</span>
+                <div class="suggestions-tags">
+                    <a href="#Services" class="search-tag"><i class="bi bi-shield-check me-1"></i> Static Guarding</a>
+                    <a href="#Services" class="search-tag"><i class="bi bi-car-front me-1"></i> Mobile Patrols</a>
+                    <a href="#Industries" class="search-tag"><i class="bi bi-building me-1"></i> Commercial Sites</a>
+                    <a href="#Quote" class="search-tag"><i class="bi bi-file-earmark-text me-1"></i> Get a Quote</a>
+                    <a href="#Careers" class="search-tag"><i class="bi bi-briefcase me-1"></i> Open Careers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= HEADER / NAVBAR SECTION ================= -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand logo-text" href="#Home">
+                    <img src="assets/imgs/Logo_Blue.PNG" alt=""></span>
+                </a>
+
+                <!-- Standard Bootstrap Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links & Button -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a aria-current="page" class="nav-link" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Industries">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Insights">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Careers">Careers</a>
+                        </li>
+                    </ul>
+
+                    <!-- Header Right Controls: Social Links, Search Button, & Get a Quote CTA -->
+                    <div class="header-utilities d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+                        <!-- Social Media Icons -->
+                        <div class="header-social-group d-flex align-items-center gap-2">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-social-btn"
+                                title="LinkedIn" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" class="header-social-btn"
+                                title="X / Twitter" aria-label="Twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-social-btn"
+                                title="Instagram" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+
+                        <!-- Search Icon Trigger -->
+                        <button type="button" class="header-search-icon-btn" id="headerSearchToggle"
+                            title="Search website" aria-label="Open Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+
+                        <!-- Clearly Labeled Get a Quote Button -->
+                        <a href="#Quote" class="btn-primary nav-quote-btn">
+                            Get a Quote <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="Home">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left Content: Text & Trust Bar -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-text-content">
+                        <span class="hero-subtitle anim-fade-up" style="animation-delay: 0.1s;">PROTECTION INTELLIGENCE
+                            PERTH</span>
+                        <h1 class="hero-main-title anim-fade-up" style="animation-delay: 0.2s;">Next Level,<br>Out of
+                            the Way.</h1>
+                        <p class="hero-description anim-fade-up" style="animation-delay: 0.3s;">
+                            Elevating physical security to protection intelligence. We provide structural discipline and
+                            risk-advisory expertise for Australia's most demanding corporate environments.
+                        </p>
+
+                        <!-- Hero Action Buttons: Clearly Labeled "Get a Quote" and "View Careers" -->
+                        <div class="hero-action-btns anim-fade-up" style="animation-delay: 0.4s;">
+                            <a href="#Quote" class="btn-primary hero-quote-btn">
+                                Get a Quote <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                            <a href="#Careers" class="btn-outline-gold hero-careers-btn">
+                                <i class="bi bi-briefcase me-1"></i> View Careers
+                            </a>
+                            <a href="#Video" class="video-play-link">
+                                <span class="play-icon"><i class="bi bi-play-fill"></i></span>
+                                <span class="play-text">See How We Work</span>
+                            </a>
+                        </div>
+
+                        <!-- Trust Bar: Visual Licensing & Verified Compliance Badges -->
+                        <div class="hero-trust-bar anim-fade-up" style="animation-delay: 0.5s;">
+                            <div class="trust-badge-card">
+                                <div class="badge-header d-flex align-items-center justify-content-between">
+                                    <div class="trust-badge-icon badge-icon-gold">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <span class="badge-status-pill pill-gold">Lic. #74102</span>
+                                </div>
+                                <div class="trust-badge-body">
+                                    <h6 class="trust-badge-title">WA Master License</h6>
+                                    <span class="trust-badge-sub">WESTERN AUSTRALIA • 100% COMPLIANT</span>
+                                </div>
+                            </div>
+
+                            <div class="trust-badge-card">
+                                <div class="badge-header d-flex align-items-center justify-content-between">
+                                    <div class="trust-badge-icon badge-icon-gold">
+                                        <i class="bi bi-award"></i>
+                                    </div>
+                                    <span class="badge-status-pill pill-gold">Tier 1 Verified</span>
+                                </div>
+                                <div class="trust-badge-body">
+                                    <h6 class="trust-badge-title">Corporate Sites</h6>
+                                    <span class="trust-badge-sub">99.8% INCIDENT PREVENTION</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Image with Cinematic Overlay & Glassmorphism Badge -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-image-wrapper anim-fade-up" style="animation-delay: 0.3s;">
+                        <!-- Corporate Executive Security Image with Cinematic Framing -->
+                        <img src="assets/imgs/hero.webp" alt="Corporate Executive Security"
+                            class="img-fluid rounded-custom hero-img-cinematic">
+                        <div class="hero-img-overlay"></div>
+
+                        <!-- Floating Badge with True Glassmorphism effect -->
+                        <div class="hero-floating-badge glass-badge anim-float">
+                            <div class="badge-icon-box">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <div class="badge-content">
+                                <span class="badge-title">Data-Driven</span>
+                                <span class="badge-sub">Risk Index</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <section class="services-section" id="Services">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center anim-fade-up">
+                <span class="sub-heading">OUR EXPERTISE</span>
+                <h2 class="main-heading">Protection Services</h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card anim-fade-up" style="animation-delay: 0.1s;">
+                    <div class="icon-box">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Static Guarding</h3>
+                    <p>High-visibility, structural discipline for critical corporate assets.</p>
+                    <a href="static-guarding.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card anim-fade-up" style="animation-delay: 0.2s;">
+                    <div class="icon-box">
+                        <i class="bi bi-car-front"></i>
+                    </div>
+                    <h3>Mobile Patrols</h3>
+                    <p>Rapid response and randomized patrols powered by risk data.</p>
+                    <a href="mobile-patrols.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card anim-fade-up" style="animation-delay: 0.3s;">
+                    <div class="icon-box">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Crowd Control</h3>
+                    <p>Event security management with a focus on seamless experience.</p>
+                    <a href="crowd-control.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card anim-fade-up" style="animation-delay: 0.4s;">
+                    <div class="icon-box">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h3>Asset Protection</h3>
+                    <p>High-value physical asset protection and comprehensive risk mitigation.</p>
+                    <a href="asset-protection.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INDUSTRIES SECTION (IMAGE CARDS) ================= -->
+    <section class="industries-section" id="Industries">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="industry-header d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div>
+                    <span class="sub-heading">SECTORS</span>
+                    <h2 class="main-heading">Industries We Serve</h2>
+                </div>
+                <div>
+                    <a href="#Quote" class="btn-outline-dark">Request Sector Case Study</a>
+                </div>
+            </div>
+
+            <!-- Industries Image Grid -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Industry 1: Commercial -->
+                    <a href="commercial-buildings.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600"
+                            alt="Commercial Buildings" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Commercial Buildings</h4>
+                            <p>Concierge & Asset Protection</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Industry 2: Retail -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="retail-stores.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600"
+                            alt="Retail Safety" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Retail Stores</h4>
+                            <p>Loss Prevention & Safety</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Industry 3: Hospitality -->
+                    <a href="hotels-hospitality.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=600"
+                            alt="Hotels & Hospitality" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Hotels & Hospitality</h4>
+                            <p>Guest Security & Discretion</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Industry 4: Events -->
+                    <a href="major-events.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.4s;">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600"
+                            alt="Event Security" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Major Events</h4>
+                            <p>Crowd Management & Access</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Industry 5: Construction -->
+                    <a href="construction-sites.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.5s;">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=600"
+                            alt="Construction Sites" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Construction</h4>
+                            <p>Site Access & Overnight Patrols</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Industry 6: Government -->
+                    <a href="government-facilities.html" class="ind-img-card anim-fade-up d-block text-decoration-none"
+                        style="animation-delay: 0.6s;">
+                        <img src="https://images.unsplash.com/photo-1518281361980-b26bfd556770?auto=format&fit=crop&q=80&w=600"
+                            alt="Government Sites" class="ind-bg-img">
+                        <div class="ind-overlay"></div>
+                        <div class="ind-card-content">
+                            <h4>Government</h4>
+                            <p>High-Compliance Federal Sites</p>
+                            <span class="explore-link"><i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY AURELIUS SECTION (PREMIUM REDESIGN) ================= -->
+    <section class="why-section" id="WhyUs">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="why-header text-center anim-fade-up">
+                <span class="sub-heading">THE AURELIUS DIFFERENCE</span>
+                <h2 class="main-heading">Beyond Standard Security</h2>
+                <p class="why-desc mx-auto">We push past parity into a category of our own — protection intelligence,
+                    structural discipline, and absolute trust.</p>
+            </div>
+
+            <!-- Premium Cards Grid -->
+            <div class="why-grid-premium">
+                <!-- Card 1 -->
+                <div class="why-card-premium anim-fade-up" style="animation-delay: 0.1s;">
+                    <div class="card-premium-top">
+                        <div class="premium-icon-box"><i class="bi bi-cpu"></i></div>
+                        <span class="premium-step">01</span>
+                    </div>
+                    <h3>Protection Intelligence</h3>
+                    <p>Reframing security from basic manpower to proactive risk management and strategic protection
+                        intelligence.</p>
+                    <div class="hover-line"></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="why-card-premium anim-fade-up" style="animation-delay: 0.2s;">
+                    <div class="card-premium-top">
+                        <div class="premium-icon-box"><i class="bi bi-shield-check"></i></div>
+                        <span class="premium-step">02</span>
+                    </div>
+                    <h3>Structural Discipline</h3>
+                    <p>A rigorous vetting and training pipeline ensuring only highly qualified, screened personnel join
+                        our ranks.</p>
+                    <div class="hover-line"></div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="why-card-premium anim-fade-up" style="animation-delay: 0.3s;">
+                    <div class="card-premium-top">
+                        <div class="premium-icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <span class="premium-step">03</span>
+                    </div>
+                    <h3>Data-Driven Deployments</h3>
+                    <p>Utilizing quarterly security risk indexes and localized incident data to strategically deploy our
+                        protection assets.</p>
+                    <div class="hover-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT US & LEADERSHIP SECTION ================= -->
+    <section class="about-section" id="About">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="sub-heading">BOUTIQUE RISK ADVISORY</span>
+                    <h2 class="main-heading">Structural Discipline Meets Discreet Protection.</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="about-story-text">
+                        Founded in Perth, Western Australia, Aurelius bridges the gap between mass-market guarding firms
+                        and elite global risk-advisory practice. We reframe corporate physical security from simple
+                        manpower into a high-visibility protection intelligence asset.
+                    </p>
+                    <div class="d-flex align-items-center gap-3 mt-3 flex-wrap">
+                        <button type="button" class="btn-outline-gold" id="triggerScreeningModal">
+                            <i class="bi bi-shield-lock me-1"></i> How We Screen Personnel
+                        </button>
+                        <button type="button" class="btn-outline-dark" id="triggerLicenseModal">
+                            <i class="bi bi-patch-check me-1"></i> WA License Verification
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Track Record Section (Aurelius Branding & WA Intel) -->
+            <div class="track-record-wrapper text-center mt-5 pt-4">
+                <span class="track-record-pill">PROTECTION INTELLIGENCE BENCHMARKS</span>
+                <h2 class="track-record-title">OUR TRACK RECORD</h2>
+                <p class="track-record-desc">Proven operational excellence in delivering Tier 1 master-licensed
+                    guarding, concierge security, and risk advisory across Perth metro and Western Australia.</p>
+
+                <div class="row g-4 mt-3">
+                    <!-- Item 1 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-award-fill"></i>
+                            </div>
+                            <span class="track-num" data-target="18" data-suffix="+">0</span>
+                            <span class="track-label">Years WA Expertise</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <span class="track-num" data-target="24" data-suffix="/7">0</span>
+                            <span class="track-label">Dispatch & Control</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-building-check"></i>
+                            </div>
+                            <span class="track-num" data-target="150" data-suffix="+">0</span>
+                            <span class="track-label">Tier 1 Perth Sites</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-person-badge-fill"></i>
+                            </div>
+                            <span class="track-num" data-target="350" data-suffix="+">0</span>
+                            <span class="track-label">Master-Licensed Guards</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-shield-lock-fill"></i>
+                            </div>
+                            <span class="track-num" data-target="1400" data-suffix="+" data-format="comma">0</span>
+                            <span class="track-label">Annual Risk Audits</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <span class="track-num" data-target="99.8" data-suffix="%" data-decimals="1">0</span>
+                            <span class="track-label">Incident Prevention</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-patch-check-fill"></i>
+                            </div>
+                            <span class="track-num" data-target="100" data-suffix="%">0</span>
+                            <span class="track-label">WA Licensed (Lic. #74102)</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="track-stat-card">
+                            <div class="track-icon-box">
+                                <i class="bi bi-stopwatch-fill"></i>
+                            </div>
+                            <span class="track-num" data-target="4.2" data-prefix="< " data-suffix=" min"
+                                data-decimals="1">0</span>
+                            <span class="track-label">Avg Patrol Response</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INSIGHTS & RISK INDEX SECTION ================= -->
+    <section class="insights-section" id="Insights">
+        <div class="container">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-7">
+                    <span class="sub-heading">PROPRIETARY DATA INTEL</span>
+                    <h2 class="main-heading">Perth Corporate Security Risk Index</h2>
+                    <p class="insights-intro-desc mt-2">
+                        Quarterly incident data analytics, localized threat indexing, and actionable risk advisory for
+                        commercial landlords, retail groups, and industrial operators in WA.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="#Quote" class="btn-primary">
+                        Download Q3 2026 Risk Report <i class="bi bi-download ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Risk Index Feature Card -->
+                <div class="col-lg-6 d-flex">
+                    <div class="risk-index-card w-100 p-4 p-md-5 rounded-4 text-white d-flex flex-column justify-content-between"
+                        style="background: linear-gradient(135deg, #0A192F 0%, #152238 100%); border: 1px solid rgba(212, 175, 55, 0.35); box-shadow: 0 25px 50px rgba(10, 25, 47, 0.15);">
+                        <div>
+                            <div class="risk-card-header d-flex align-items-center justify-content-between mb-3">
+                                <span class="risk-quarter-pill px-3 py-1 rounded-pill text-gold border border-warning"
+                                    style="background: rgba(212, 175, 55, 0.15); font-size: 11px; font-weight: 700; letter-spacing: 1.5px;">Q3
+                                    2026 BENCHMARK</span>
+                                <span class="risk-status small text-muted font-monospace"><i
+                                        class="bi bi-broadcast me-1 text-gold"></i> WA REGIONAL DATA</span>
+                            </div>
+                            <h3 class="risk-report-title font-serif fw-bold text-white mb-3"
+                                style="font-size: 26px; line-height: 1.3;">Western Australia Commercial Property Risk
+                                Index</h3>
+                            <p class="risk-report-summary text-muted mb-4" style="font-size: 14px; line-height: 1.6;">
+                                Analyzing over 1,400 security dispatch logs, CBD access breaches, and perimeter security
+                                events across Perth metro corporate towers.</p>
+                        </div>
+
+                        <div class="risk-metrics-grid d-grid gap-2 pt-3 border-top border-secondary border-opacity-50 text-center"
+                            style="grid-template-columns: repeat(3, 1fr); width: 100%;">
+                            <div class="metric-box w-100 p-2 p-md-3 rounded-3 text-center"
+                                style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(212, 175, 55, 0.35); box-sizing: border-box;">
+                                <span class="metric-val d-block font-serif fw-bold text-gold"
+                                    style="font-size: 18px; line-height: 1.2; white-space: nowrap;">99.8%</span>
+                                <span class="metric-lbl d-block text-uppercase fw-semibold text-muted mt-1"
+                                    style="font-size: 10px; letter-spacing: 0.5px; line-height: 1.2;">Prevention
+                                    Rate</span>
+                            </div>
+                            <div class="metric-box w-100 p-2 p-md-3 rounded-3 text-center"
+                                style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(212, 175, 55, 0.35); box-sizing: border-box;">
+                                <span class="metric-val d-block font-serif fw-bold text-gold"
+                                    style="font-size: 18px; line-height: 1.2; white-space: nowrap;">4.2 min</span>
+                                <span class="metric-lbl d-block text-uppercase fw-semibold text-muted mt-1"
+                                    style="font-size: 10px; letter-spacing: 0.5px; line-height: 1.2;">Avg
+                                    Response</span>
+                            </div>
+                            <div class="metric-box w-100 p-2 p-md-3 rounded-3 text-center"
+                                style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(212, 175, 55, 0.35); box-sizing: border-box;">
+                                <span class="metric-val d-block font-serif fw-bold text-gold"
+                                    style="font-size: 18px; line-height: 1.2; white-space: nowrap;">100%</span>
+                                <span class="metric-lbl d-block text-uppercase fw-semibold text-muted mt-1"
+                                    style="font-size: 10px; letter-spacing: 0.5px; line-height: 1.2;">WA Licensed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seed Insight Posts -->
+                <div class="col-lg-6">
+                    <div class="insights-list d-flex flex-column gap-3">
+                        <div
+                            class="insight-post-card p-4 rounded-3 bg-white border border-secondary border-opacity-25 shadow-sm">
+                            <div class="post-meta d-flex justify-content-between text-muted small mb-2">
+                                <span class="post-date"><i class="bi bi-calendar3 me-1 text-gold"></i> July 2026</span>
+                                <span class="post-author fw-semibold">By Julian Vance, CRO</span>
+                            </div>
+                            <h4 class="post-title font-serif fw-bold mb-2" style="font-size: 19px;"><a href="#Quote"
+                                    class="text-dark text-decoration-none hover-gold">Mitigating Perimeter
+                                    Vulnerabilities in Perth Commercial Towers</a></h4>
+                            <p class="post-excerpt text-muted small mb-0" style="line-height: 1.6;">How data-driven
+                                concierge access protocols eliminate unauthorized floor access without disrupting
+                                executive workflow.</p>
+                        </div>
+
+                        <div
+                            class="insight-post-card p-4 rounded-3 bg-white border border-secondary border-opacity-25 shadow-sm">
+                            <div class="post-meta d-flex justify-content-between text-muted small mb-2">
+                                <span class="post-date"><i class="bi bi-calendar3 me-1 text-gold"></i> June 2026</span>
+                                <span class="post-author fw-semibold">By Elena Rostova</span>
+                            </div>
+                            <h4 class="post-title font-serif fw-bold mb-2" style="font-size: 19px;"><a href="#Quote"
+                                    class="text-dark text-decoration-none hover-gold">Front-of-House Concierge Security:
+                                    Hospitality vs. Vigilance</a></h4>
+                            <p class="post-excerpt text-muted small mb-0" style="line-height: 1.6;">Balancing welcoming
+                                guest experience with structural access discipline in high-value corporate environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS SECTION (CARD STYLE) ================= -->
+    <section class="testimonials-section" id="Testimonials">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="testi-header text-center anim-fade-up">
+                <span class="sub-heading">CLIENT OUTCOMES</span>
+                <h2 class="main-heading">Trusted by Industry Leaders</h2>
+            </div>
+
+            <!-- Swiper Carousel Container -->
+            <div class="swiper testi-swiper anim-fade-up" style="animation-delay: 0.2s;">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1: Tariq Mahmood -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                                        alt="Tariq Mahmood"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Tariq
+                                            Mahmood</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Perth, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Aurelius has been instrumental in safeguarding our commercial developments across
+                                Perth. Their tactical precision, WA master licensing compliance, and real-time incident
+                                reporting give us total operational confidence."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Priya Sharma -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                                        alt="Priya Sharma"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Priya
+                                            Sharma</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Sydney, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "The front-of-house concierge security personnel provided by Aurelius represent the
+                                benchmark of discretion and vigilance. Loss prevention rates at our flagship retail
+                                premises improved instantly."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Muhammad Hassan -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+                                        alt="Muhammad Hassan"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Muhammad
+                                            Hassan</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Melbourne, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Their mobile patrol service and rapid dispatch give us complete peace of mind. Response
+                                times are lightning fast, and their monthly risk audit reports are incredibly detailed
+                                and professional."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Ananya Patel -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                                        alt="Ananya Patel"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Ananya
+                                            Patel</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Brisbane, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Managing corporate summits used to be high-stress until we partnered with Aurelius.
+                                Their crowd management units and executive protection officers operate with
+                                military-grade precision."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Zubair Khan -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200"
+                                        alt="Zubair Khan"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Zubair
+                                            Khan</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Perth, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Heavy machinery and site assets require uncompromising static guarding. Aurelius guards
+                                are punctual, disciplined, and thoroughly trained in WA compliance standards."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Elena Rostova -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+                                        alt="Elena Rostova"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Elena
+                                            Rostova</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Melbourne, Australia</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Aurelius didn't just provide guards; they completely overhauled our risk profile. Their
+                                structural discipline and corporate presentation are unmatched in Western Australia."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination (Client Outcomes Dots) -->
+                <div class="swiper-pagination client-swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GUARDS & SECURITY PERSONNEL REVIEWS (CARD STYLE SWIPER) ================= -->
+    <section class="testimonials-section py-5" id="GuardReviews"
+        style="background-color: var(--bg-light-gray); border-top: 1px solid #E2E8F0;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="testi-header text-center anim-fade-up mb-5">
+                <span class="sub-heading">WORKFORCE VOICES</span>
+                <h2 class="main-heading">Guards & Security Personnel Reviews</h2>
+            </div>
+
+            <!-- Swiper Carousel Container -->
+            <div class="swiper guards-swiper anim-fade-up" style="animation-delay: 0.2s;">
+                <div class="swiper-wrapper">
+
+                    <!-- Guard Slide 1: Bilal Ahmed -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200"
+                                        alt="Bilal Ahmed"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Bilal
+                                            Ahmed</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Senior Patrol Guard • 3 Yrs Service</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Working at Aurelius is unlike any other security firm in WA. Management respects our
+                                safety, provides top-tier tactical equipment, and ensures shift schedules are strictly
+                                award-compliant."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Guard Slide 2: Vikram Singh -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+                                        alt="Vikram Singh"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Vikram
+                                            Singh</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Corporate Concierge • 2 Yrs Service</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "The professional standards expected here are high, but the support and continuous
+                                training we receive are second to none. Control room operators back us up instantly on
+                                site."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Guard Slide 3: Usman Malik -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=200"
+                                        alt="Usman Malik"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Usman
+                                            Malik</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Crowd Control Lead • Worked 4 Yrs</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Aurelius handles corporate events with clear tactical briefings and de-escalation
+                                protocols. Shift planning is transparent, and dedicated guards are rewarded with
+                                promotion pathways."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Guard Slide 4: Deepak Kumar -->
+                    <div class="swiper-slide h-auto d-flex">
+                        <div
+                            class="testi-card-box w-100 p-4 p-md-5 bg-white rounded-4 border border-secondary border-opacity-25 shadow-sm d-flex flex-column justify-content-between">
+                            <div class="testi-card-top d-flex align-items-center justify-content-between mb-4">
+                                <div class="author-info-group d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=200"
+                                        alt="Deepak Kumar"
+                                        class="author-avatar rounded-circle border border-2 border-warning"
+                                        style="width: 60px; height: 60px; object-fit: cover; flex-shrink: 0;">
+                                    <div>
+                                        <h5 class="author-name fw-bold text-dark mb-0" style="font-size: 17px;">Deepak
+                                            Kumar</h5>
+                                        <span class="author-location text-gold fw-semibold"
+                                            style="font-size: 13px;">Asset Protection Guard • Current</span>
+                                    </div>
+                                </div>
+                                <div class="rating-stars text-warning d-flex gap-1 fs-6">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testi-card-text font-serif fst-italic text-dark mb-0"
+                                style="font-size: 19px; line-height: 1.65;">
+                                "Guarding high-value infrastructure requires extreme discipline. Having real-time
+                                digital incident logs and supportive WA master-licensed management makes Aurelius the
+                                best team."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination (Dots) -->
+                <div class="swiper-pagination guards-swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CAREERS SECTION (CLEAN WHITE & CHARCOAL) ================= -->
+    <section class="careers-section" id="Careers">
+        <div class="container">
+            <div class="careers-editorial-wrapper anim-fade-up">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <span class="careers-sub-gold">JOIN OUR RANKS</span>
+                        <h2 class="careers-main-title font-serif fw-bold text-white mb-3" style="font-size: 38px;">Are
+                            You a Master-Licensed Security Professional?</h2>
+                        <p class="careers-editorial-desc">We maintain rigorous structural discipline and only onboard
+                            elite personnel with proven corporate or tactical backgrounds in Western Australia.</p>
+
+                        <!-- Careers Button updated to luxury styled gold button -->
+                        <a href="#Careers" class="btn-primary-custom" id="viewOpenPositionsBtn"
+                            style="background: linear-gradient(135deg, #D4AF37 0%, #B89628 100%); color: #0A192F !important; font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);">
+                            View Open Positions <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600"
+                            alt="Careers at Aurelius" class="careers-img img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= B2B QUOTE FORM & FOOTER SECTION ================= -->
+    <section class="contact-footer-section" id="Quote">
+        <div class="container">
+            <!-- B2B Quote Form Box -->
+            <div class="contact-box anim-fade-up">
+                <div class="row align-items-center">
+                    <!-- Left Details -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <span class="sub-heading">INITIATE CONSULTATION</span>
+                        <h2 class="main-heading mb-4">Request a Security Quote</h2>
+                        <p class="contact-desc mb-4">Speak directly with our risk-advisory team in Perth. We provide
+                            discreet, master-licensed security solutions for corporate enterprise and high-compliance
+                            sites.</p>
+
+                        <div class="contact-info-list">
+                            <div class="ci-item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Perth, Western Australia</span>
+                            </div>
+                            <div class="ci-item">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>+61 8 9400 0000</span>
+                            </div>
+                            <div class="ci-item">
+                                <i class="bi bi-envelope-fill"></i>
+                                <span>inquiries@aurelius-protection.com.au</span>
+                            </div>
+                            <div class="ci-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>WA Master License Compliant (Lic. #74102)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right B2B Quote Form & Instant Scope Estimator (Dual-Tab Interface) -->
+                    <div class="col-lg-7">
+                        <!-- Navigation Tabs -->
+                        <ul class="nav nav-tabs quote-tabs mb-4 border-0" id="quoteTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="b2b-form-tab" data-bs-toggle="tab"
+                                    data-bs-target="#b2bFormPane" type="button" role="tab" aria-controls="b2bFormPane"
+                                    aria-selected="true">
+                                    <i class="bi bi-file-earmark-text me-1"></i> Quote Form
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="estimator-tab" data-bs-toggle="tab"
+                                    data-bs-target="#estimatorPane" type="button" role="tab"
+                                    aria-controls="estimatorPane" aria-selected="false">
+                                    <i class="bi bi-calculator me-1"></i> Scope Estimator
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="quoteTabContent">
+                            <!-- Tab 1: B2B Form -->
+                            <div class="tab-pane fade show active" id="b2bFormPane" role="tabpanel"
+                                aria-labelledby="b2b-form-tab">
+                                <form class="consultation-form" id="b2bQuoteForm">
+                                    <div class="row g-3">
+                                        <!-- Full Name -->
+                                        <div class="col-md-6">
+                                            <label for="b2bFullName" class="form-label-custom">Full Name <span
+                                                    class="text-gold">*</span></label>
+                                            <!-- Added name="fullName" -->
+                                            <input type="text" name="fullName" id="b2bFullName"
+                                                class="form-control-custom" placeholder="Full Name" required>
+                                        </div>
+
+                                        <!-- Company Name -->
+                                        <div class="col-md-6">
+                                            <label for="b2bCompanyName" class="form-label-custom">Company Name <span
+                                                    class="text-gold">*</span></label>
+                                            <!-- Added name="companyName" -->
+                                            <input type="text" name="companyName" id="b2bCompanyName"
+                                                class="form-control-custom" placeholder="Company Name" required>
+                                        </div>
+
+                                        <!-- Work Email -->
+                                        <div class="col-md-6">
+                                            <label for="b2bEmail" class="form-label-custom">Work Email <span
+                                                    class="text-gold">*</span></label>
+                                            <!-- Added name="email" -->
+                                            <input type="email" name="email" id="b2bEmail" class="form-control-custom"
+                                                placeholder="Work Email" required>
+                                        </div>
+
+                                        <!-- Phone Number -->
+                                        <div class="col-md-6">
+                                            <label for="b2bPhone" class="form-label-custom">Phone Number <span
+                                                    class="text-gold">*</span></label>
+                                            <!-- Added name="phone" -->
+                                            <input type="tel" name="phone" id="b2bPhone" class="form-control-custom"
+                                                placeholder="Phone Number" required>
+                                        </div>
+
+                                        <!-- Requirements -->
+                                        <div class="col-md-12">
+                                            <label for="b2bRequirements" class="form-label-custom">Message /
+                                                Requirements <span class="text-gold">*</span></label>
+                                            <!-- Added name="requirements" -->
+                                            <textarea name="requirements" id="b2bRequirements"
+                                                class="form-control-custom" rows="4"
+                                                placeholder="Message / Security Requirements..." required></textarea>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn-primary w-100 py-3 btn-b2b-submit">
+                                                Request Security Quote <i class="bi bi-arrow-right ms-2"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="b2b-feedback-alert mt-3" style="display:none;"></div>
+                                </form>
+                            </div>
+
+                            <!-- Tab 2: Real-Time Scope & Quote Estimator -->
+                            <div class="tab-pane fade" id="estimatorPane" role="tabpanel"
+                                aria-labelledby="estimator-tab">
+                                <div class="estimator-box p-4 rounded-3 border">
+                                    <h5 class="estimator-title font-serif text-gold mb-3"><i
+                                            class="bi bi-sliders me-1"></i> Real-Time Protection Scope Calculator</h5>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label-custom">Facility / Sector Type</label>
+                                            <select id="estFacility" class="form-control-custom form-select">
+                                                <option value="commercial">Commercial Office Tower</option>
+                                                <option value="retail">Retail Shopping Center</option>
+                                                <option value="industrial">Industrial / Mining Site</option>
+                                                <option value="event">Corporate Major Event</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label-custom">Guards Required: <span id="estGuardsVal"
+                                                    class="fw-bold text-gold">2</span></label>
+                                            <input type="range" class="form-range mt-2" id="estGuards" min="1" max="10"
+                                                value="2">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label-custom">Coverage Hours / Week: <span
+                                                    id="estHoursVal" class="fw-bold text-gold">40 hrs</span></label>
+                                            <input type="range" class="form-range mt-2" id="estHours" min="10" max="168"
+                                                step="10" value="40">
+                                        </div>
+                                    </div>
+
+                                    <!-- Result Card -->
+                                    <div
+                                        class="estimator-result mt-4 p-3 rounded-3 bg-dark text-white d-flex align-items-center justify-content-between flex-wrap gap-2 border border-secondary">
+                                        <div>
+                                            <span class="d-block text-gold small fw-bold">ESTIMATED DEPLOYMENT
+                                                SCOPE</span>
+                                            <h5 class="mb-0 text-white font-serif" id="estSummary">2 Master-Licensed
+                                                Guards • 40 Hrs/Wk</h5>
+                                            <span class="small text-muted" id="estCoverageType">Tier 1 Concierge &
+                                                Access Patrol Coverage</span>
+                                        </div>
+                                        <button type="button" class="btn-primary btn-sm" id="estApplyBtn">
+                                            Apply To Quote <i class="bi bi-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Footer Bottom -->
+            <footer class="site-footer">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h3 class="footer-logo"><img src="assets/imgs/Logo_Blue.PNG" alt="Aurelius"></h3>
+                        <p class="footer-copy text-muted small mb-0">© 2026 Aurelius Protection Intelligence. All Rights
+                            Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <ul
+                            class="footer-links list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-3 mb-0 p-0">
+                            <li><a href="#Home" class="text-secondary text-decoration-none fw-semibold small">Home</a>
+                            </li>
+                            <li><a href="#Services"
+                                    class="text-secondary text-decoration-none fw-semibold small">Services</a></li>
+                            <li><a href="#Industries"
+                                    class="text-secondary text-decoration-none fw-semibold small">Industries</a></li>
+                            <li><a href="#WhyUs" class="text-secondary text-decoration-none fw-semibold small">Why
+                                    Us</a></li>
+                            <li><a href="#About" class="text-secondary text-decoration-none fw-semibold small">About
+                                    Us</a></li>
+                            <li><a href="#Insights"
+                                    class="text-secondary text-decoration-none fw-semibold small">Insights</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Gorgeous Back to Top Button -->
+    <a href="#Home" class="back-to-top-btn" title="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- ================= HOW WE SCREEN MODAL ================= -->
+    <div class="modal fade" id="screeningModal" tabindex="-1" aria-labelledby="screeningModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content luxury-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-serif text-gold" id="screeningModalLabel"><i
+                            class="bi bi-shield-check me-2"></i> Our 4-Step Personnel Screening Pipeline</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="pipeline-steps d-flex flex-column gap-3">
+                        <div class="pipeline-step p-3 rounded-2 bg-dark-subtle border border-secondary d-flex gap-3">
+                            <span class="step-num text-gold font-serif fw-bold fs-4">01</span>
+                            <div>
+                                <h6 class="text-white mb-1">WA Police Clearance & Master License Verification</h6>
+                                <p class="small text-muted mb-0">Comprehensive criminal background checks and 100%
+                                    registration verification with the WA Police Security Licensing Department.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step p-3 rounded-2 bg-dark-subtle border border-secondary d-flex gap-3">
+                            <span class="step-num text-gold font-serif fw-bold fs-4">02</span>
+                            <div>
+                                <h6 class="text-white mb-1">Psychological & Tactical Vetting</h6>
+                                <p class="small text-muted mb-0">Rigorous behavioral screening assessing situational
+                                    composure, conflict de-escalation, and high-stress decision making.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step p-3 rounded-2 bg-dark-subtle border border-secondary d-flex gap-3">
+                            <span class="step-num text-gold font-serif fw-bold fs-4">03</span>
+                            <div>
+                                <h6 class="text-white mb-1">Hospitality & Concierge Training</h6>
+                                <p class="small text-muted mb-0">Specialized corporate front-of-house training blending
+                                    executive discretion with vigilant perimeter access discipline.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step p-3 rounded-2 bg-dark-subtle border border-secondary d-flex gap-3">
+                            <span class="step-num text-gold font-serif fw-bold fs-4">04</span>
+                            <div>
+                                <h6 class="text-white mb-1">Site-Specific Onboarding & Risk Index Integration</h6>
+                                <p class="small text-muted mb-0">Site threat profiling, emergency response drills, and
+                                    deployment integration with our Perth Risk Index data protocols.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= WA LICENSE VERIFICATION MODAL ================= -->
+    <div class="modal fade" id="licenseModal" tabindex="-1" aria-labelledby="licenseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content luxury-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-serif text-gold" id="licenseModalLabel"><i
+                            class="bi bi-patch-check-fill me-2"></i> Official License Credentials</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="license-badge-large mb-3">
+                        <i class="bi bi-shield-lock-fill text-gold display-4"></i>
+                    </div>
+                    <h4 class="text-white font-serif">Aurelius Protection Intelligence</h4>
+                    <p class="text-gold fw-bold mb-2">WA Security Master License #74102</p>
+                    <span class="badge bg-success mb-3"><i class="bi bi-check-circle-fill me-1"></i> Active & 100%
+                        Compliant</span>
+                    <p class="small text-muted mb-4">Registered & Regulated under the Western Australia Security and
+                        Related Activities (Control) Act 1996.</p>
+                    <a href="https://www.police.wa.gov.au/" target="_blank" rel="noopener"
+                        class="btn-outline-gold btn-sm">
+                        Verify via WA Police Register <i class="bi bi-box-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 1. Add the EmailJS SDK to your HTML -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        var testiSwiper = new Swiper(".testi-swiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".client-swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+
+        var guardsSwiper = new Swiper(".guards-swiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".guards-swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize EmailJS
+            emailjs.init("X4qFK_gflVEEtdqO4");
+
+            // Grab all instances of the form class to prevent duplicate ID bugs
+            const forms = document.querySelectorAll(".consultation-form");
+
+            forms.forEach(form => {
+                const feedbackMsg = form.querySelector(".b2b-feedback-alert");
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnContent = submitBtn.innerHTML;
+
+                // Scope the inputs strictly to the current form instance using the name attributes
+                const emailInput = form.querySelector('input[name="email"]');
+                const phoneInput = form.querySelector('input[name="phone"]');
+
+                function validateRequiredFields() {
+                    if (emailInput.value.trim() !== "" && phoneInput.value.trim() !== "") {
+                        submitBtn.disabled = false;
+                        submitBtn.style.opacity = "1";
+                        submitBtn.style.cursor = "pointer";
+                    } else {
+                        submitBtn.disabled = true;
+                        submitBtn.style.opacity = "0.5";
+                        submitBtn.style.cursor = "not-allowed";
+                    }
+                }
+
+                validateRequiredFields();
+                emailInput.addEventListener("input", validateRequiredFields);
+                phoneInput.addEventListener("input", validateRequiredFields);
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    // Target the exact form being submitted
+                    const currentForm = event.target;
+
+                    submitBtn.innerHTML = 'Sending... <i class="bi bi-hourglass-split ms-2"></i>';
+                    submitBtn.disabled = true;
+                    if (feedbackMsg) feedbackMsg.style.display = "none";
+
+                    // sendForm automatically pairs HTML 'name' attributes with EmailJS {{variables}}
+                    emailjs.sendForm("service_2wbjmb8", "template_u88gc5e", currentForm)
+                        .then(
+                            function () {
+                                if (feedbackMsg) {
+                                    feedbackMsg.style.display = "block";
+                                    feedbackMsg.className = "b2b-feedback-alert mt-3 alert alert-success";
+                                    feedbackMsg.textContent = "Thank you! Your quote request has been sent successfully.";
+                                }
+                                currentForm.reset();
+                                validateRequiredFields();
+                            },
+                            function (error) {
+                                if (feedbackMsg) {
+                                    feedbackMsg.style.display = "block";
+                                    feedbackMsg.className = "b2b-feedback-alert mt-3 alert alert-danger";
+                                    feedbackMsg.textContent = "Oops! Something went wrong. Please try again later.";
+                                }
+                                console.error("EmailJS Error:", error);
+                            }
+                        )
+                        .finally(function () {
+                            submitBtn.innerHTML = originalBtnContent;
+                            validateRequiredFields();
+                        });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
