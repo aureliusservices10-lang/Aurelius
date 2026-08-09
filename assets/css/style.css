@@ -1897,6 +1897,36 @@ ul.footer-links li a:hover {
 
 /* --- 4. Small Mobile Phones (Max Width: 576px) --- */
 @media screen and (max-width: 576px) {
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .risk-index-card {
+        padding: 30px 20px !important;
+    }
+
+    .risk-card-header {
+        flex-wrap: wrap;
+    }
+
+    .careers-main-title {
+        font-size: 26px !important;
+    }
+
+    .site-footer ul.footer-links,
+    ul.footer-links {
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    .track-record-title {
+        font-size: 26px !important;
+    }
+
+    .why-card-premium h3 {
+        font-size: 20px !important;
+    }
+
     .hero-trust-bar {
         flex-wrap: wrap;
         flex-direction: column;
@@ -1920,7 +1950,11 @@ ul.footer-links li a:hover {
     }
 
     .hero-section {
-        padding: 120px 0 60px 0;
+        padding: 40px 0 40px 0;
+    }
+
+    .hero-img-overlay {
+        left: 0;
     }
 
     .hero-title {
