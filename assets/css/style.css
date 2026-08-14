@@ -736,7 +736,7 @@ body {
 
 .service-card {
     background-color: var(--bg-white);
-    padding: 45px 20px;
+    padding: 30px 20px;
     border-radius: 8px;
     border: 1px solid #E5E7EB;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
@@ -772,7 +772,7 @@ body {
 
 .service-card h3 {
     font-family: var(--font-serif);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--primary-dark);
     margin-bottom: 14px;
