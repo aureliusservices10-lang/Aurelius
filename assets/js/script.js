@@ -243,4 +243,310 @@ document.addEventListener('DOMContentLoaded', function () {
             window.requestAnimationFrame(step);
         });
     }
+
+    // ================= HERO CONSTELLATION NETWORK CANVAS =================
+    const heroCanvas = document.getElementById('heroNetworkCanvas');
+    const heroSection = document.getElementById('Home');
+
+    if (heroCanvas && heroSection) {
+        const ctx = heroCanvas.getContext('2d');
+        let width = 0;
+        let height = 0;
+        let dpr = window.devicePixelRatio || 1;
+        let particles = [];
+        let animationFrameId = null;
+        let isHeroVisible = true;
+
+        const mouse = {
+            x: null,
+            y: null,
+            radius: 160 // Connection radius to mouse cursor
+        };
+
+        // Resize Canvas with DPR for ultra-crisp Retina rendering
+        function resizeCanvas() {
+            const rect = heroSection.getBoundingClientRect();
+            width = rect.width;
+            height = rect.height;
+            dpr = window.devicePixelRatio || 1;
+
+            heroCanvas.width = width * dpr;
+            heroCanvas.height = height * dpr;
+            ctx.scale(dpr, dpr);
+
+            initParticles();
+        }
+
+        // Particle Class
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.45;
+                this.vy = (Math.random() - 0.5) * 0.45;
+                this.radius = Math.random() * 1.8 + 1.2; // 1.2px - 3.0px
+                
+                // Varied golden & subtle navy tones for depth
+                const isGold = Math.random() > 0.25;
+                this.color = isGold ? '#D4AF37' : '#0A192F';
+                this.alpha = isGold ? (Math.random() * 0.4 + 0.45) : 0.25;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges smoothly
+                if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+
+                // Interactive mouse repulsion / nudge
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < mouse.radius && dist > 0) {
+                        const force = (mouse.radius - dist) / mouse.radius;
+                        this.x -= (dx / dist) * force * 0.6;
+                        this.y -= (dy / dist) * force * 0.6;
+                    }
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.alpha;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            // Dynamic particle count based on viewport area
+            const density = (width * height) / 13000;
+            const count = Math.min(Math.max(Math.floor(density), 35), 90);
+
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        // Connect nearby particles with delicate golden lines
+        function connectParticles() {
+            const maxDistance = width < 768 ? 95 : 130;
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < maxDistance) {
+                        const opacity = (1 - dist / maxDistance) * 0.35;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+                        ctx.lineWidth = 0.75;
+                        ctx.stroke();
+                    }
+                }
+
+                // Connect to mouse cursor if within range
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - particles[i].x;
+                    const dy = mouse.y - particles[i].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < mouse.radius) {
+                        const opacity = (1 - dist / mouse.radius) * 0.55;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+                        ctx.lineWidth = 0.9;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Animation Loop
+        function animate() {
+            if (!isHeroVisible) return;
+
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+
+            connectParticles();
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        // Track Mouse Position
+        heroSection.addEventListener('mousemove', function (e) {
+            const rect = heroSection.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        heroSection.addEventListener('mouseleave', function () {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        // Touch Interaction
+        heroSection.addEventListener('touchmove', function (e) {
+            if (e.touches.length > 0) {
+                const rect = heroSection.getBoundingClientRect();
+                mouse.x = e.touches[0].clientX - rect.left;
+                mouse.y = e.touches[0].clientY - rect.top;
+            }
+        }, { passive: true });
+
+        heroSection.addEventListener('touchend', function () {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        // Pause animation when hero is offscreen to save battery/resources
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isHeroVisible = entry.isIntersecting;
+                if (isHeroVisible) {
+                    if (!animationFrameId) {
+                        animate();
+                    }
+                } else {
+                    if (animationFrameId) {
+                        cancelAnimationFrame(animationFrameId);
+                        animationFrameId = null;
+                    }
+                }
+            });
+        }, { threshold: 0.05 });
+
+        heroObserver.observe(heroSection);
+
+        // Resize Listener
+        let resizeTimeout;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(resizeCanvas, 150);
+        });
+
+        // Initial setup
+        resizeCanvas();
+        animate();
+    }
+
+    // ================= EXPANDING SERVICES SHOWCASE INTERACTION =================
+    const servicesAccordion = document.getElementById('servicesAccordion');
+    const serviceCards = document.querySelectorAll('.expanding-service-card');
+
+    if (servicesAccordion && serviceCards.length > 0) {
+        let currentIndex = 0;
+        let progressAnimId = null;
+        let isHovered = false;
+        let isSectionVisible = false;
+        const CYCLE_DURATION = 4500; // 4.5 seconds per card
+        let cycleStartTime = null;
+
+        function setActiveCard(index, resetProgress = true) {
+            currentIndex = index;
+            serviceCards.forEach((card, idx) => {
+                const progressFill = card.querySelector('.progress-fill');
+                if (idx === index) {
+                    card.classList.add('active');
+                    if (progressFill && resetProgress) progressFill.style.width = '0%';
+                } else {
+                    card.classList.remove('active');
+                    if (progressFill) progressFill.style.width = '0%';
+                }
+            });
+
+            if (resetProgress) {
+                cycleStartTime = performance.now();
+            }
+        }
+
+        function runProgressBar(timestamp) {
+            if (!cycleStartTime) cycleStartTime = timestamp;
+            if (isSectionVisible && !isHovered) {
+                const elapsed = timestamp - cycleStartTime;
+                const progress = Math.min((elapsed / CYCLE_DURATION) * 100, 100);
+
+                const activeCard = serviceCards[currentIndex];
+                if (activeCard) {
+                    const activeProgressFill = activeCard.querySelector('.progress-fill');
+                    if (activeProgressFill) {
+                        activeProgressFill.style.width = `${progress}%`;
+                    }
+                }
+
+                if (elapsed >= CYCLE_DURATION) {
+                    const nextIndex = (currentIndex + 1) % serviceCards.length;
+                    setActiveCard(nextIndex, true);
+                }
+            }
+            progressAnimId = requestAnimationFrame(runProgressBar);
+        }
+
+        function startAutoPlay() {
+            if (!progressAnimId) {
+                cycleStartTime = performance.now();
+                progressAnimId = requestAnimationFrame(runProgressBar);
+            }
+        }
+
+        function stopAutoPlay() {
+            if (progressAnimId) {
+                cancelAnimationFrame(progressAnimId);
+                progressAnimId = null;
+            }
+        }
+
+        // Card Hover & Click events
+        serviceCards.forEach((card, idx) => {
+            card.addEventListener('mouseenter', () => {
+                isHovered = true;
+                setActiveCard(idx, false);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                isHovered = false;
+                cycleStartTime = performance.now();
+            });
+
+            card.addEventListener('click', (e) => {
+                // If user clicks on the link/button itself, allow normal link navigation
+                if (e.target.closest('.btn-expand-cta')) return;
+                setActiveCard(idx, true);
+            });
+        });
+
+        // Trigger and pause via IntersectionObserver
+        const servicesSection = document.getElementById('Services');
+        if (servicesSection) {
+            const servicesObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    isSectionVisible = entry.isIntersecting;
+                    if (isSectionVisible) {
+                        startAutoPlay();
+                    } else {
+                        stopAutoPlay();
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            servicesObserver.observe(servicesSection);
+        }
+    }
 });
