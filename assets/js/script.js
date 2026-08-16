@@ -549,4 +549,28 @@ document.addEventListener('DOMContentLoaded', function () {
             servicesObserver.observe(servicesSection);
         }
     }
+
+    // Floating Back to Top Button Controller
+    const backToTopBtns = document.querySelectorAll('.back-to-top-btn, .floating-btn-top');
+    if (backToTopBtns.length > 0) {
+        function checkScrollPos() {
+            if (window.scrollY > 220) {
+                backToTopBtns.forEach(btn => btn.classList.add('btn-visible'));
+            } else {
+                backToTopBtns.forEach(btn => btn.classList.remove('btn-visible'));
+            }
+        }
+        window.addEventListener('scroll', checkScrollPos);
+        checkScrollPos();
+
+        backToTopBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
 });
