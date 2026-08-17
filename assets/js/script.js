@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 feedbackMsg.style.display = 'block';
                 feedbackMsg.className = 'b2b-feedback-alert mt-3';
                 feedbackMsg.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i> Thank you, <strong>${fullName}</strong>! Your quote request for <strong>${companyName}</strong> has been transmitted to our Perth Risk Advisory Team. We will contact you within 2 business hours.`;
-                
+
                 b2bForm.reset();
                 setTimeout(() => {
                     feedbackMsg.style.display = 'none';
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.vx = (Math.random() - 0.5) * 0.45;
                 this.vy = (Math.random() - 0.5) * 0.45;
                 this.radius = Math.random() * 1.8 + 1.2; // 1.2px - 3.0px
-                
+
                 // Varied golden & subtle navy tones for depth
                 const isGold = Math.random() > 0.25;
                 this.color = isGold ? '#D4AF37' : '#0A192F';
@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let progressAnimId = null;
         let isHovered = false;
         let isSectionVisible = false;
-        const CYCLE_DURATION = 4500; // 4.5 seconds per card
+        const CYCLE_DURATION = 2000; // 2 seconds per card
         let cycleStartTime = null;
 
         function setActiveCard(index, resetProgress = true) {

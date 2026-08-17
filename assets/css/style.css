@@ -45,6 +45,64 @@ body {
     background: var(--accent-gold);
 }
 
+/* ================= TOPBAR SECTION ================= */
+.topbar-section {
+    background: #060D17;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    padding: 6px 0;
+    font-size: 12.5px;
+    color: #94A3B8;
+    position: relative;
+    z-index: 1001;
+}
+
+.topbar-link {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    font-size: 12.5px;
+    letter-spacing: 0.2px;
+}
+
+.topbar-link:hover {
+    color: var(--accent-gold);
+}
+
+.topbar-badge {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #D4AF37;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+}
+
+.topbar-text {
+    font-size: 12px;
+    color: #94A3B8;
+}
+
+@media (max-width: 576px) {
+    .topbar-section {
+        padding: 5px 0;
+    }
+
+    .topbar-link {
+        font-size: 11px;
+    }
+
+    .topbar-left {
+        gap: 12px !important;
+    }
+}
+
 /* ================= HEADER SECTION & UTILITIES ================= */
 .header-section {
     position: fixed;
@@ -166,7 +224,8 @@ body {
 
 /* Hover open on desktop */
 @media (min-width: 992px) {
-    .luxury-dropdown:hover > .luxury-dropdown-menu,
+
+    .luxury-dropdown:hover>.luxury-dropdown-menu,
     .luxury-dropdown-menu:hover {
         display: block !important;
         opacity: 1 !important;
@@ -181,6 +240,7 @@ body {
         opacity: 0;
         transform: translateY(6px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -471,7 +531,7 @@ body {
     background-color: var(--bg-white);
     height: auto;
     min-height: calc(100vh - 100px);
-    margin-top: 90px;
+    margin-top: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -921,10 +981,10 @@ body {
     border: 1.5px solid rgba(10, 25, 47, 0.08);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
     transition: flex 0.75s cubic-bezier(0.25, 1, 0.35, 1),
-                transform 0.4s ease,
-                border-color 0.4s ease,
-                box-shadow 0.4s ease,
-                filter 0.5s ease;
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.5s ease;
     filter: grayscale(35%) brightness(0.7);
 }
 
@@ -945,7 +1005,7 @@ body {
 .card-bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, rgba(10, 25, 47, 0.9) 80%, rgba(10, 25, 47, 0.98) 100%);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.5) 0%, rgba(10, 25, 47, 0.4) 80%, rgba(10, 25, 47, 0.5) 100%);
     transition: background 0.6s ease;
     z-index: 1;
 }
@@ -1917,6 +1977,7 @@ body {
 }
 
 @media (max-width: 991px) {
+
     .contact-left-panel,
     .contact-right-panel {
         padding: 40px 30px;
@@ -2355,13 +2416,58 @@ ul.footer-links li a:hover {
     font-weight: 700 !important;
 }
 
-/* ================= LUXURY MODALS ================= */
+/* ================= LUXURY MODALS (WHITE & GOLD REVERSED) ================= */
 .luxury-modal {
-    background-color: var(--primary-dark) !important;
+    background-color: #FFFFFF !important;
     border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    border-top: 4px solid var(--accent-gold) !important;
     border-radius: 16px !important;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
-    color: #FFFFFF !important;
+    box-shadow: 0 25px 60px rgba(10, 25, 47, 0.22) !important;
+    color: #0A192F !important;
+}
+
+.luxury-modal .modal-header {
+    border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.luxury-modal .modal-title {
+    color: #0A192F !important;
+    font-weight: 700;
+}
+
+.luxury-modal .btn-close {
+    filter: none !important;
+    opacity: 0.6;
+}
+
+.luxury-modal .btn-close:hover {
+    opacity: 1;
+}
+
+.luxury-modal .pipeline-step {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-left: 3px solid var(--accent-gold) !important;
+    border-radius: 10px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.luxury-modal .pipeline-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(10, 25, 47, 0.08);
+}
+
+.luxury-modal .step-num {
+    color: #D4AF37 !important;
+}
+
+.luxury-modal .pipeline-step h6 {
+    color: #0A192F !important;
+    font-weight: 700;
+}
+
+.luxury-modal .pipeline-step p {
+    color: #475569 !important;
 }
 
 .bg-dark-subtle {
@@ -2841,7 +2947,7 @@ ul.footer-links li a:hover {
     .site-footer-luxury {
         padding: 60px 0 30px 0;
     }
-    
+
     .footer-watermark-bg {
         font-size: 80px;
         bottom: -5px;
@@ -2959,10 +3065,13 @@ ul.footer-links li a:hover {
 
 /* Wave Glow Animations */
 @keyframes floatingPulseWhatsApp {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
         box-shadow: 0 10px 28px rgba(37, 211, 102, 0.25), 0 0 0 0 rgba(37, 211, 102, 0.4);
     }
+
     50% {
         transform: translateY(-5px);
         box-shadow: 0 15px 32px rgba(37, 211, 102, 0.35), 0 0 0 8px rgba(37, 211, 102, 0);
@@ -2970,10 +3079,13 @@ ul.footer-links li a:hover {
 }
 
 @keyframes floatingPulseLinkedIn {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
         box-shadow: 0 10px 28px rgba(10, 25, 47, 0.25), 0 0 0 0 rgba(212, 175, 55, 0.3);
     }
+
     50% {
         transform: translateY(-5px);
         box-shadow: 0 15px 32px rgba(10, 25, 47, 0.35), 0 0 0 8px rgba(212, 175, 55, 0);
