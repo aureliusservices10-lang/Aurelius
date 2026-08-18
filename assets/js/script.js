@@ -447,107 +447,94 @@ document.addEventListener('DOMContentLoaded', function () {
         animate();
     }
 
-    // ================= EXPANDING SERVICES SHOWCASE INTERACTION =================
+    // ================= SERVICES SCROLL-DRIVEN STEPPED EXPANDING ACCORDION =================
+    const servicesSection = document.getElementById('Services');
     const servicesAccordion = document.getElementById('servicesAccordion');
     const serviceCards = document.querySelectorAll('.expanding-service-card');
 
-    if (servicesAccordion && serviceCards.length > 0) {
-        let currentIndex = 0;
-        let progressAnimId = null;
-        let isHovered = false;
-        let isSectionVisible = false;
-        const CYCLE_DURATION = 2000; // 2 seconds per card
-        let cycleStartTime = null;
+    if (servicesSection && servicesAccordion && serviceCards.length > 0) {
+        let activeIndex = -1;
+        let isTicking = false;
 
-        function setActiveCard(index, resetProgress = true) {
-            currentIndex = index;
+        function setActiveCard(index) {
+            if (index === activeIndex) return;
+            activeIndex = index;
+
             serviceCards.forEach((card, idx) => {
                 const progressFill = card.querySelector('.progress-fill');
                 if (idx === index) {
                     card.classList.add('active');
-                    if (progressFill && resetProgress) progressFill.style.width = '0%';
+                    if (progressFill) progressFill.style.width = '100%';
                 } else {
                     card.classList.remove('active');
                     if (progressFill) progressFill.style.width = '0%';
                 }
             });
+        }
 
-            if (resetProgress) {
-                cycleStartTime = performance.now();
+        function updateScrollAccordion() {
+            const rect = servicesSection.getBoundingClientRect();
+            const sectionHeight = servicesSection.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            const scrollDistance = sectionHeight - viewportHeight;
+
+            if (scrollDistance <= 0) {
+                if (activeIndex !== 0) setActiveCard(0);
+                return;
+            }
+
+            // Calculate scroll progress through the section
+            // Section top starts matching when rect.top <= 90 (below navbar)
+            const topOffset = 90;
+            const scrolled = -rect.top + topOffset;
+            const progress = Math.max(0, Math.min(1, scrolled / scrollDistance));
+
+            // Map progress to card indices [0, 1, 2, 3]
+            const numCards = serviceCards.length;
+            let targetIndex = Math.floor(progress * numCards);
+            if (targetIndex >= numCards) targetIndex = numCards - 1;
+            if (targetIndex < 0) targetIndex = 0;
+
+            setActiveCard(targetIndex);
+        }
+
+        function onScroll() {
+            if (!isTicking) {
+                window.requestAnimationFrame(() => {
+                    updateScrollAccordion();
+                    isTicking = false;
+                });
+                isTicking = true;
             }
         }
 
-        function runProgressBar(timestamp) {
-            if (!cycleStartTime) cycleStartTime = timestamp;
-            if (isSectionVisible && !isHovered) {
-                const elapsed = timestamp - cycleStartTime;
-                const progress = Math.min((elapsed / CYCLE_DURATION) * 100, 100);
-
-                const activeCard = serviceCards[currentIndex];
-                if (activeCard) {
-                    const activeProgressFill = activeCard.querySelector('.progress-fill');
-                    if (activeProgressFill) {
-                        activeProgressFill.style.width = `${progress}%`;
-                    }
-                }
-
-                if (elapsed >= CYCLE_DURATION) {
-                    const nextIndex = (currentIndex + 1) % serviceCards.length;
-                    setActiveCard(nextIndex, true);
-                }
-            }
-            progressAnimId = requestAnimationFrame(runProgressBar);
-        }
-
-        function startAutoPlay() {
-            if (!progressAnimId) {
-                cycleStartTime = performance.now();
-                progressAnimId = requestAnimationFrame(runProgressBar);
-            }
-        }
-
-        function stopAutoPlay() {
-            if (progressAnimId) {
-                cancelAnimationFrame(progressAnimId);
-                progressAnimId = null;
-            }
-        }
-
-        // Card Hover & Click events
+        // Direct card click: expand immediately & smooth scroll to that card's scroll step
         serviceCards.forEach((card, idx) => {
-            card.addEventListener('mouseenter', () => {
-                isHovered = true;
-                setActiveCard(idx, false);
-            });
-
-            card.addEventListener('mouseleave', () => {
-                isHovered = false;
-                cycleStartTime = performance.now();
-            });
-
             card.addEventListener('click', (e) => {
-                // If user clicks on the link/button itself, allow normal link navigation
                 if (e.target.closest('.btn-expand-cta')) return;
-                setActiveCard(idx, true);
+                setActiveCard(idx);
+
+                const rect = servicesSection.getBoundingClientRect();
+                const sectionTop = window.scrollY + rect.top;
+                const sectionHeight = servicesSection.offsetHeight;
+                const viewportHeight = window.innerHeight;
+                const scrollDistance = sectionHeight - viewportHeight;
+
+                if (scrollDistance > 0) {
+                    const targetScroll = sectionTop + ((idx + 0.15) / serviceCards.length) * scrollDistance - 90;
+                    window.scrollTo({
+                        top: targetScroll,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
-        // Trigger and pause via IntersectionObserver
-        const servicesSection = document.getElementById('Services');
-        if (servicesSection) {
-            const servicesObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    isSectionVisible = entry.isIntersecting;
-                    if (isSectionVisible) {
-                        startAutoPlay();
-                    } else {
-                        stopAutoPlay();
-                    }
-                });
-            }, { threshold: 0.15 });
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
 
-            servicesObserver.observe(servicesSection);
-        }
+        // Initial trigger
+        updateScrollAccordion();
     }
 
     // Floating Back to Top Button Controller
