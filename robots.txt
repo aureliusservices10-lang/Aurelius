@@ -1,4 +1,4 @@
-# robots.txt for Aurelius Protective Services
+# robots.txt for Aurelius Security Services
 # Domain: https://aureliusservices.com.au/
 
 User-agent: *
