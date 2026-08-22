@@ -64,6 +64,23 @@ body {
     z-index: 1001;
 }
 
+.topbar-inner-row {
+    position: relative;
+    width: 100%;
+}
+
+.topbar-left,
+.topbar-right {
+    flex: 1 1 0;
+}
+
+.topbar-center {
+    flex: 2 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .topbar-link {
     color: #CBD5E1;
     text-decoration: none;
@@ -97,17 +114,18 @@ body {
     color: #94A3B8;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .topbar-section {
-        padding: 5px 0;
+        padding: 6px 0;
+    }
+
+    .topbar-center {
+        width: 100%;
+        justify-content: center;
     }
 
     .topbar-link {
-        font-size: 11px;
-    }
-
-    .topbar-left {
-        gap: 12px !important;
+        font-size: 11.5px;
     }
 }
 
@@ -2811,6 +2829,23 @@ ul.footer-links li a:hover {
 .footer-copy-text {
     font-size: 13.5px;
     color: #64748B;
+}
+
+.footer-powered-by {
+    color: #64748B;
+    font-size: 13.5px;
+}
+
+.powered-by-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.powered-by-link:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
 }
 
 .footer-legal-links {

@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else if (facility === 'industrial') coverageDesc = 'Perimeter Barrier Security & Patrol Vehicle';
         else if (facility === 'event') coverageDesc = 'Executive Protection & Access Control Unit';
 
-        if (estSummary) estSummary.textContent = `${guards} Master-Licensed Guard${guards > 1 ? 's' : ''} • ${hours} Hrs/Wk`;
+        if (estSummary) estSummary.textContent = `${guards} Licensed Guard${guards > 1 ? 's' : ''} • ${hours} Hrs/Wk`;
         if (estCoverageType) estCoverageType.textContent = coverageDesc;
     }
 
