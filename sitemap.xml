@@ -103,9 +103,33 @@
     <!-- 13. Compliance & Credentials -->
     <url>
         <loc>https://aureliusservices.com.au/compliance.html</loc>
-        <lastmod>2026-08-16</lastmod>
+        <lastmod>2026-08-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- 14. Privacy Policy -->
+    <url>
+        <loc>https://aureliusservices.com.au/privacy.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- 15. Terms of Service -->
+    <url>
+        <loc>https://aureliusservices.com.au/terms.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- 16. Website Disclaimer -->
+    <url>
+        <loc>https://aureliusservices.com.au/disclaimer.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 
 </urlset>
