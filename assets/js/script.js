@@ -20,9 +20,60 @@ window.addEventListener("load", function () {
     }
 });
 
-// Search Overlay & Interactivity
+// Search Overlay & Interactivity & Mobile Navbar Auto-Collapse
 document.addEventListener('DOMContentLoaded', function () {
+    // ================= MOBILE NAVBAR AUTO-CLOSE CONTROLLER =================
+    const navbarCollapse = document.getElementById('navbarSupportedContent');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    function closeMobileNavbar() {
+        if (!navbarCollapse) return;
+        if (navbarCollapse.classList.contains('show') || navbarCollapse.classList.contains('collapsing')) {
+            if (window.bootstrap && window.bootstrap.Collapse) {
+                const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                bsCollapse.hide();
+            } else if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
+                navbarToggler.click();
+            }
+        }
+    }
+
+    if (navbarCollapse) {
+        // Close navbar automatically when clicking any link/tab inside the collapse,
+        // EXCEPT dropdown toggles (Services, Industries) which open submenus.
+        const navInteractiveLinks = navbarCollapse.querySelectorAll('a:not(.dropdown-toggle):not([data-bs-toggle="dropdown"])');
+        navInteractiveLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                closeMobileNavbar();
+            });
+        });
+
+        // Close navbar if clicking anywhere outside of it on mobile/tablet
+        document.addEventListener('click', function (event) {
+            if (navbarCollapse.classList.contains('show')) {
+                const isClickInside = navbarCollapse.contains(event.target) || (navbarToggler && navbarToggler.contains(event.target));
+                if (!isClickInside) {
+                    closeMobileNavbar();
+                }
+            }
+        });
+    }
+
+    // Also close mobile menu if brand logo is clicked
+    const brandLogo = document.querySelector('.navbar-brand');
+    if (brandLogo) {
+        brandLogo.addEventListener('click', function () {
+            closeMobileNavbar();
+        });
+    }
+
     const searchToggleBtn = document.getElementById('headerSearchToggle');
+    if (searchToggleBtn) {
+        searchToggleBtn.addEventListener('click', function () {
+            closeMobileNavbar();
+        });
+    }
+
     const searchOverlay = document.getElementById('searchOverlay');
     const searchCloseBtn = document.getElementById('searchOverlayClose');
     const searchInput = document.getElementById('headerSearchInput');

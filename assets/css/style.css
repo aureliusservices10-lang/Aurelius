@@ -20,6 +20,11 @@
     --font-sans: 'Inter', 'Plus Jakarta Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
 .text-gold {
     color: var(--accent-gold) !important;
 }
@@ -3063,23 +3068,45 @@ ul.footer-links li a:hover {
 .footer-copy-text {
     font-size: 13.5px;
     color: #64748B;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .footer-powered-by {
     color: #64748B;
     font-size: 13.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .powered-by-link {
-    color: var(--accent-gold);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease, text-decoration 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .powered-by-link:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.syntric-logo-footer {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.powered-by-link:hover .syntric-logo-footer {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 2px 8px rgba(0, 128, 255, 0.45));
 }
 
 .footer-legal-links {
@@ -3118,6 +3145,10 @@ ul.footer-links li a:hover {
     .footer-watermark-bg {
         font-size: 80px;
         bottom: -5px;
+    }
+
+    .footer-bottom-bar {
+        padding-bottom: 75px !important;
     }
 }
 
