@@ -1856,7 +1856,10 @@
             <div class="footer-bottom-bar d-flex flex-wrap align-items-center justify-content-between pt-4 pb-2">
                 <p class="footer-copy-text mb-2 mb-md-0">
                     © 2026 Aurelius Security Services. All Rights Reserved. <span
-                        class="d-none d-sm-inline opacity-50 mx-1">|</span> <span class="footer-powered-by">Powered by <a href="https://syntrictech.com" target="_blank" rel="noopener" class="powered-by-link" aria-label="Syntric Tech"><img src="assets/imgs/SyntricTech_transparent.png" alt="Syntric Tech" class="syntric-logo-footer"></a></span>
+                        class="d-none d-sm-inline opacity-50 mx-1">|</span> <span class="footer-powered-by">Powered by
+                        <a href="https://syntrictech.com" target="_blank" rel="noopener" class="powered-by-link"
+                            aria-label="Syntric Tech"><img src="assets/imgs/SyntricTech_transparent.png"
+                                alt="Syntric Tech" class="syntric-logo-footer"></a></span>
                 </p>
 
                 <div class="footer-legal-links d-flex align-items-center flex-wrap gap-3">
@@ -1872,6 +1875,26 @@
                 </div>
             </div>
     </footer>
+
+    <!-- Floating Animated Social & Contact Stack (Back to Top, WhatsApp & LinkedIn) -->
+    <div class="floating-action-stack" aria-label="Quick Navigation and Contact">
+        <a href="#Home" class="floating-action-btn back-to-top-btn" id="floatingBackToTop" aria-label="Back to Top"
+            title="Back to Top">
+            <i class="bi bi-chevron-up"></i>
+            <span class="floating-label-tooltip">Back to Top</span>
+        </a>
+        <a href="https://wa.me/61470456120" target="_blank" rel="noopener"
+            class="floating-action-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+            <span class="floating-online-dot"></span>
+            <span class="floating-label-tooltip">Chat on WhatsApp</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="floating-action-btn floating-btn-linkedin"
+            aria-label="Connect on LinkedIn">
+            <i class="bi bi-linkedin"></i>
+            <span class="floating-label-tooltip">Connect on LinkedIn</span>
+        </a>
+    </div>
 
     <!-- ================= HOW WE SCREEN MODAL ================= -->
     <div class="modal fade" id="screeningModal" tabindex="-1" aria-labelledby="screeningModalLabel" aria-hidden="true">
@@ -2033,8 +2056,8 @@
             // Initialize EmailJS
             emailjs.init("X4qFK_gflVEEtdqO4");
 
-            // Grab all instances of the form class to prevent duplicate ID bugs
-            const forms = document.querySelectorAll(".consultation-form");
+            // Yahan class name fix kar diya gaya hai (.consultation-form-minimal)
+            const forms = document.querySelectorAll(".consultation-form-minimal");
 
             forms.forEach(form => {
                 const feedbackMsg = form.querySelector(".b2b-feedback-alert");
@@ -2100,26 +2123,6 @@
             });
         });
     </script>
-
-    <!-- Floating Animated Social & Contact Stack (Back to Top, WhatsApp & LinkedIn) -->
-    <div class="floating-action-stack" aria-label="Quick Navigation and Contact">
-        <a href="#Home" class="floating-action-btn back-to-top-btn" id="floatingBackToTop" aria-label="Back to Top"
-            title="Back to Top">
-            <i class="bi bi-chevron-up"></i>
-            <span class="floating-label-tooltip">Back to Top</span>
-        </a>
-        <a href="https://wa.me/61470456120" target="_blank" rel="noopener"
-            class="floating-action-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-            <span class="floating-online-dot"></span>
-            <span class="floating-label-tooltip">Chat on WhatsApp</span>
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="floating-action-btn floating-btn-linkedin"
-            aria-label="Connect on LinkedIn">
-            <i class="bi bi-linkedin"></i>
-            <span class="floating-label-tooltip">Connect on LinkedIn</span>
-        </a>
-    </div>
 </body>
 
 </html>
