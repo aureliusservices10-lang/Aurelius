@@ -2110,6 +2110,30 @@ body {
     font-size: 14px;
 }
 
+.form-control-minimal[type="file"] {
+    padding-top: 4px !important;
+    padding-bottom: 6px !important;
+    cursor: pointer;
+}
+
+.form-control-minimal[type="file"]::file-selector-button {
+    background: #0A192F;
+    color: #FFFFFF;
+    border: none;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.form-control-minimal[type="file"]::file-selector-button:hover {
+    background: #D4AF37;
+    color: #0A192F;
+}
+
 .form-textarea-minimal {
     min-height: 80px;
     resize: vertical;
@@ -3774,3 +3798,242 @@ ul.footer-links li a:hover {
     font-size: 22px;
     margin-bottom: 16px;
 }
+
+/* ================= SECURITY GUARD CAREERS & OPEN POSITIONS ================= */
+.career-hero-section {
+    background: linear-gradient(135deg, rgba(6, 13, 23, 0.90) 0%, rgba(10, 25, 47, 0.82) 100%), url('assets/imgs/JOIN OUR RANKS.webp') center/cover no-repeat;
+    padding: 170px 0 110px 0;
+    position: relative;
+}
+
+.job-card-luxury {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 32px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(10, 25, 47, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card-luxury:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(10, 25, 47, 0.09);
+}
+
+.job-card-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0%;
+    background: var(--accent-gold);
+    transition: height 0.35s ease;
+}
+
+.job-card-luxury:hover::before {
+    height: 100%;
+}
+
+.job-type-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.job-type-fulltime {
+    background: rgba(16, 185, 129, 0.1);
+    color: #047857;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.job-type-casual {
+    background: rgba(59, 130, 246, 0.1);
+    color: #1D4ED8;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.job-type-fifo {
+    background: rgba(212, 175, 55, 0.15);
+    color: #8A6D1C;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.job-rate-tag {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0 16px 0;
+}
+
+.job-rate-tag span {
+    color: #047857;
+    font-size: 17px;
+}
+
+.job-spec-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.job-spec-list li {
+    font-size: 13.5px;
+    color: #475569;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.job-spec-list li i {
+    color: var(--accent-gold);
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.job-filter-pill {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    color: #475569;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.job-filter-pill:hover,
+.job-filter-pill.active {
+    background: var(--primary-dark);
+    color: var(--accent-gold-light);
+    border-color: var(--primary-dark);
+}
+
+/* Guard Application Portal Split Box */
+.guard-portal-box {
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(10, 25, 47, 0.08);
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+}
+
+.guard-portal-left {
+    background: linear-gradient(180deg, #07101E 0%, #0D1A2F 100%);
+    padding: 60px 48px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.guard-portal-right {
+    background: #FFFFFF;
+    padding: 60px 50px;
+}
+
+.guard-req-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.guard-req-item i {
+    color: var(--accent-gold);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.guard-req-item span {
+    font-size: 14.5px;
+    color: #CBD5E1;
+    line-height: 1.55;
+}
+
+.guard-checkbox-label {
+    font-size: 13.5px;
+    color: #334155;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-form-select {
+    width: 100%;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    border-radius: 0 !important;
+    padding: 10px 0 !important;
+    font-size: 14.5px;
+    color: #0F172A !important;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.custom-form-select:focus {
+    border-bottom-color: #0A192F !important;
+}
+
+.form-file-input {
+    width: 100%;
+    font-size: 13px;
+    color: #64748B;
+    border: 1px dashed #CBD5E1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #F8FAFC;
+    transition: border-color 0.25s ease;
+}
+
+.form-file-input:focus {
+    border-color: var(--accent-gold);
+    outline: none;
+}
+
+.recruitment-step-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 30px 24px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.recruitment-step-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(10, 25, 47, 0.06);
+}
+
+.recruitment-step-num {
+    font-family: var(--font-cinzel);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    line-height: 1;
+    margin-bottom: 14px;
+}
